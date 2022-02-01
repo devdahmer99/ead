@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method static get()
  * @method static findOrFail($id)
+ * @method static getCourse($id)
  */
 class Course extends Model
 {

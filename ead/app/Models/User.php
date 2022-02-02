@@ -14,7 +14,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, UuidTrait;
 
-    public bool $incrementing = false;
+    public $incrementing = false;
     protected $keyType = 'uuid';
 
     /**

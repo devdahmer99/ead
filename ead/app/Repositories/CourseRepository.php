@@ -5,7 +5,7 @@ use App\Models\Course;
 
 class CourseRepository
 {
-    protected $entity;
+    protected Course $entity;
 
     public function __construct(Course $model)
     {

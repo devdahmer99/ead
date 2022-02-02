@@ -9,7 +9,7 @@ use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class CourseController extends Controller
 {
-    protected $repository;
+    protected CourseRepository $repository;
 
     public function __construct(CourseRepository $courseRepository)
     {

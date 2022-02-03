@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use JetBrains\PhpStorm\ArrayShape;
 
+/**
+ * @property mixed $name
+ * @property mixed $id
+ */
 class ModuleResource extends JsonResource
 {
     /**

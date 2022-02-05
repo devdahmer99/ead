@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Models\Support;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
 
 class SupportRepository
 {
@@ -31,6 +32,17 @@ class SupportRepository
                             })
                             ->get();
     }
+    public function createNewSupport(array $data): Model
+    {
+        $support = $this->getUserAuth()->supports()->create([
+            'lesson_id' => $data['lesson'],
+            'description' => $data['description'],
+            'status' => $data['status'],
+        ]);
+
+        return $support;
+    }
+
 
     private function getUserAuth(): User
     {

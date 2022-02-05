@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/ead/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/ead/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/ead/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/ead/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/league/config" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/facade/ignition-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/facade/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/facade/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/dflydev/dot-access-data" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/laravel/telescope" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/laravel/serializable-closure" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/polyfill-iconv" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/asm89/stack-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/opis/closure" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/fruitcake/laravel-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/ead/vendor/ralouphie/getallheaders" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

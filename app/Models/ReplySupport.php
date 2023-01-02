@@ -14,6 +14,8 @@ class ReplySupport extends Model
     protected $fillable = ['description', 'support_id'];
     protected $table = ['reply_support'];
 
+    protected $touches = ['support'];
+
     public function support()
     {
         return $this->belongsTo(Support::class);

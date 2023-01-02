@@ -16,6 +16,13 @@ class SupportRepository
         $this->entity = $model;
     }
 
+    public function getMySupports(Support $model)
+    {
+        $filters['user'] = true;
+
+        return $this->getSupports($filters);
+    }
+
     public function getSupports(array $filters = []): Collection
     {
         return $this->getUserAuth()
@@ -25,14 +32,25 @@ class SupportRepository
                                     $query->where('lesson_id', $filters['lesson']);
                                 }
 
+                                if(isset($filters['status'])) {
+                                    $query->where('status', $filters['status']);
+                                }
+
                                 if (isset($filters['filter'])) {
                                     $filter = $filters['filter'];
                                     $query->where('description', 'LIKE', "%{$filter}%");
                                 }
+
+                                if(isset($filters['user'])) {
+                                    $user = $this->getUserAuth();
+                                    $query->where('user_id', $user->id);
+                                }
                             })
+                            ->with('replies')
+                            ->orderBy('updated_at')
                             ->get();
     }
-    public function createNewSupport(array $data): Model
+    public function createNewSupport(array $data): Support
     {
         $support = $this->getUserAuth()->supports()->create([
             'lesson_id' => $data['lesson'],
@@ -46,6 +64,7 @@ class SupportRepository
     public function createReplyToSupportId($supportId, array $data)
     {
         $user = $this->getUserAuth();
+
         $this->getSupport($supportId)
             ->replies()
             ->create([

@@ -13,7 +13,7 @@ class StoreReplySupport extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class StoreReplySupport extends FormRequest
     public function rules()
     {
         return [
-            //
+            'description' => ['required', 'min:3', 'max:10000']
         ];
     }
 }

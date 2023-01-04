@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/auth', [AuthController::class, 'auth']);
 
-Route::middleware(['auth:sactum'])->group(function() {
+Route::middleware('auth:sanctum')->group(function() {
     Route::get('/courses',[CourseController::class, 'index']);
     Route::get('/courses/{id}',[CourseController::class, 'show']);
     Route::get('/courses/{id}/modules', [ModuleController::class, 'index']);

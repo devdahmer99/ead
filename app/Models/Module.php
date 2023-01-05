@@ -19,8 +19,13 @@ class Module extends Model
     protected $fillable = ['name'];
 
 
-    public function course(): HasMany
+    public function course()
     {
         return $this->belongsTo(Course::class);
+    }
+
+    public function lesson()
+    {
+        return $this->hasMany(Lesson::class);
     }
 }

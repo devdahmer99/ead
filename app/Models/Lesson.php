@@ -2,10 +2,11 @@
 
 namespace App\Models;
 
+use App\Models\Support;
 use App\Models\Traits\UuidTrait;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * @method where(string $string, string $moduleId)
@@ -19,14 +20,19 @@ class Lesson extends Model
     protected $keyType = 'uuid';
     protected $fillable = ['name', 'description', 'video'];
 
-
-    public function user(): BelongsTo
+    public function supports()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Support::class);
     }
 
-    public function lesson(): BelongsTo
+    public function view()
     {
-        return $this->belongsTo(Lesson::class);
+        return $this->hasMany(View::class)
+                    ->where(function ($query) {
+                        if(auth()->check()) {
+                            return $query->where('user_id', auth()->user()->id);
+                        }
+                    });
     }
+
 }

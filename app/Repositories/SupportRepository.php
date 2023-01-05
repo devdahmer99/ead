@@ -23,11 +23,10 @@ class SupportRepository
         return $this->getSupports($filters);
     }
 
-    public function getSupports(array $filters = []): Collection
+    public function getSupports(array $filters = [])
     {
-        return $this->getUserAuth()
-                            ->supports()
-                            ->where(function ($query) use ($filters) {
+        return $this->entity
+                    ->where(function ($query) use ($filters) {
                                 if (isset($filters['lesson'])) {
                                     $query->where('lesson_id', $filters['lesson']);
                                 }
@@ -52,11 +51,13 @@ class SupportRepository
     }
     public function createNewSupport(array $data): Support
     {
-        $support = $this->getUserAuth()->supports()->create([
-            'lesson_id' => $data['lesson'],
-            'description' => $data['description'],
-            'status' => $data['status'],
-        ]);
+        $support = $this->getUserAuth()
+                        ->supports()
+                        ->create([
+                                'lesson_id' => $data['lesson'],
+                                'description' => $data['description'],
+                                'status' => $data['status'],
+                            ]);
 
         return $support;
     }
@@ -68,8 +69,8 @@ class SupportRepository
         $this->getSupport($supportId)
             ->replies()
             ->create([
-            'description' => $data['description'],
-            'user_id' => $user->id,
+                'description' => $data['description'],
+                'user_id' => $user->id,
         ]);
     }
 
@@ -78,9 +79,4 @@ class SupportRepository
         return $this->entity->findOrFail($id);
     }
 
-    private function getUserAuth(): User
-    {
-        //return auth()->user();
-        return User::first();
-    }
 }

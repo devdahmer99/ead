@@ -1,7 +1,8 @@
 <?php
 namespace App\Repositories;
 use App\Models\ReplySupport;
-use App\Repositories\Traits\ReporitoryTrait;
+use App\Repositories\Traits\RepositoryTrait;
+
 
 class ReplySupportRepository
 {

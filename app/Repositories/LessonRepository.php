@@ -3,9 +3,11 @@
 namespace App\Repositories;
 
 use App\Models\Lesson;
+use App\Repositories\Traits\RepositoryTrait;
 
 class LessonRepository
 {
+    use RepositoryTrait;
     protected Lesson $entity;
 
     public function __construct(Lesson $model)
@@ -32,7 +34,7 @@ class LessonRepository
 
         $view = $user->views()->where('lesson_id', $lessonId)->first();
 
-        if($view) {
+        if ($view) {
             return $view->update([
                 'qty' => $view->qty + 1,
             ]);

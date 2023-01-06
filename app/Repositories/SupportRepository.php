@@ -4,11 +4,13 @@ namespace App\Repositories;
 
 use App\Models\Support;
 use App\Models\User;
+use App\Repositories\Traits\RepositoryTrait;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
 class SupportRepository
 {
+    use RepositoryTrait;
     protected Support $entity;
 
     public function __construct(Support $model)

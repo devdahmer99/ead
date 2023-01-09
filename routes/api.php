@@ -15,16 +15,10 @@ use App\Http\Controllers\Api\Auth\{
 
 use Illuminate\Support\Facades\Route;
 
-<<<<<<< HEAD
+
     Route::post('/auth', [AuthController::class, 'auth']);
     Route::post('/logout', [AuthController::class, 'logout'])->middleware(['auth:sanctum']);
     Route::get('/me', [AuthController::class, 'me'])->middleware(['auth:sanctum']);
-
-=======
-Route::post('/auth', [AuthController::class, 'auth']);
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
-Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
->>>>>>> c407d1dc5a8c8682f40271f249ee74a479d54f78
 
 Route::middleware('auth:sanctum')->group(function() {
     Route::get('/courses',[CourseController::class, 'index']);

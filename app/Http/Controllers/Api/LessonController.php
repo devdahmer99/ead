@@ -2,30 +2,29 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Requests\StoreView;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreView;
 use App\Http\Resources\LessonResource;
 use App\Repositories\LessonRepository;
-use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Request;
 
 class LessonController extends Controller
 {
-    protected LessonRepository $repository;
+    protected $repository;
 
     public function __construct(LessonRepository $lessonRepository)
     {
         $this->repository = $lessonRepository;
     }
 
-    public function index($moduleId): AnonymousResourceCollection
+    public function index($moduleId)
     {
-        $lessons =  $this->repository->getLessonsByModuleId($moduleId);
+        $lessons = $this->repository->getLessonsByModuleId($moduleId);
 
         return LessonResource::collection($lessons);
     }
 
-
-    public function show($id): LessonResource
+    public function show($id)
     {
         return new LessonResource($this->repository->getLesson($id));
     }

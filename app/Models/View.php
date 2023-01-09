@@ -2,22 +2,22 @@
 
 namespace App\Models;
 
-use App\Models\User;
-use App\Models\Lesson;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class View extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['lesson_ id', 'user_id', 'qty'];
+    protected $fillable = ['lesson_id', 'user_id', 'qty'];
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function lesson() {
+    public function lesson()
+    {
         return $this->belongsTo(Lesson::class);
     }
 }

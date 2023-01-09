@@ -2,33 +2,24 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-use JetBrains\PhpStorm\ArrayShape;
-use JsonSerializable as JsonSerializableAlias;
 
-/**
- * @property mixed $name
- * @property mixed $description
- * @property mixed $video
- */
 class LessonResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
      *
-     * @param  Request  $request
-     * @return array|Arrayable|JsonSerializableAlias
+     * @param  \Illuminate\Http\Request  $request
+     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
-    #[ArrayShape(['id' => "mixed", 'name' => "string", 'description' => "mixed", 'video' => "mixed"])]
-    public function toArray($request): array|JsonSerializableAlias|Arrayable
+    public function toArray($request)
     {
         return [
             'id' => $this->id,
             'name' => ucwords(strtolower($this->name)),
             'description' => $this->description,
             'video' => $this->video,
+            'views' => ViewResource::collection($this->whenLoaded('views')),
         ];
     }
 }

@@ -1,8 +1,9 @@
 <?php
+
 namespace App\Repositories;
+
 use App\Models\ReplySupport;
 use App\Repositories\Traits\RepositoryTrait;
-
 
 class ReplySupportRepository
 {
@@ -10,19 +11,21 @@ class ReplySupportRepository
 
     protected $entity;
 
-    public function __contruct(ReplySupport $model)
+    public function __construct(ReplySupport $model)
     {
         $this->entity = $model;
     }
 
-    public function createReplySupport(array $data)
+    public function createReplyToSupport(array $data)
     {
         $user = $this->getUserAuth();
 
-        return $this->entity->create([
-            'support_id' => $data['support'],
-            'description' => $data['description'],
-            'user_id' => $user->id
-        ]);
+        return $this->entity
+                    ->create([
+                        'support_id' => $data['support'],
+                        'description' => $data['description'],
+                        'user_id' => $user->id,
+                    ]);
     }
+
 }

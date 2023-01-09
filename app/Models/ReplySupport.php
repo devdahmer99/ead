@@ -3,17 +3,20 @@
 namespace App\Models;
 
 use App\Models\Traits\UuidTrait;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class ReplySupport extends Model
 {
     use HasFactory, UuidTrait;
 
     public $incrementing = false;
+
     protected $keyType = 'uuid';
-    protected $fillable = ['description', 'support_id'];
-    protected $table = ['reply_support'];
+
+    protected $fillable = ['description', 'support_id', 'user_id'];
+
+    protected $table = 'reply_support';
 
     protected $touches = ['support'];
 
@@ -26,5 +29,4 @@ class ReplySupport extends Model
     {
         return $this->belongsTo(User::class);
     }
-
 }

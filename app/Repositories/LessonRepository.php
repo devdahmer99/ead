@@ -8,7 +8,8 @@ use App\Repositories\Traits\RepositoryTrait;
 class LessonRepository
 {
     use RepositoryTrait;
-    protected Lesson $entity;
+
+    protected $entity;
 
     public function __construct(Lesson $model)
     {

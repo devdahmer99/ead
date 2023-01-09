@@ -5,23 +5,23 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CourseResource;
 use App\Repositories\CourseRepository;
-use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    protected CourseRepository $repository;
+    protected $repository;
 
     public function __construct(CourseRepository $courseRepository)
     {
         $this->repository = $courseRepository;
     }
 
-    public function index(): AnonymousResourceCollection
+    public function index()
     {
         return CourseResource::collection($this->repository->getAllCourses());
     }
 
-    public function show($id): CourseResource
+    public function show($id)
     {
         return new CourseResource($this->repository->getCourse($id));
     }

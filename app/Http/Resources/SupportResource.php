@@ -2,38 +2,28 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Http\Request;
+use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
-use JetBrains\PhpStorm\ArrayShape;
-use JetBrains\PhpStorm\Pure;
-use JsonSerializable as JsonSerializableAlias;
 
-/**
- * @property mixed $status
- * @property mixed $statusOptions
- * @property mixed $description
- * @property mixed $user
- * @property mixed $lesson
- */
 class SupportResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
      *
-     * @param  Request  $request
-     * @return array|Arrayable|JsonSerializableAlias
+     * @param  \Illuminate\Http\Request  $request
+     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
-    #[Pure] #[ArrayShape(['status' => "mixed", 'status_label' => "mixed", 'description' => "mixed", 3 => "string"])]
-    public function toArray($request): array|JsonSerializableAlias|Arrayable
+    public function toArray($request)
     {
         return [
             'id' => $this->id,
             'status' => $this->status,
-            'status_label' => $this->statusOptions[$this->status] ?? 'Not found status',
+            'status_label' => $this->statusOptions[$this->status] ?? 'Not Found Status',
             'description' => $this->description,
             'user' => new UserResource($this->user),
-            'lesson' => new LessonResource($this->lesson),
+            'lesson' => new LessonResource($this->whenLoaded('lessons')),
+            'replies' => LessonResource::collection($this->whenLoaded('replies')),
+            'dt_updated' => Carbon::make($this->updated_at)->format('Y-m-d H:i:s'),
         ];
     }
 }

@@ -2,14 +2,14 @@
 
 namespace Tests\Feature\Api;
 
-use Tests\TestCase;
 use App\Models\Course;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
 class CourseTest extends TestCase
 {
-   use UtilsTrait;
+    use UtilsTrait;
 
     public function test_unauthenticated()
     {
@@ -20,8 +20,6 @@ class CourseTest extends TestCase
 
     public function test_get_all_courses()
     {
-        $token = $this->createTokenUser();
-
         $response = $this->getJson('/courses', $this->defaultHeaders());
 
         $response->assertStatus(200);
@@ -34,12 +32,12 @@ class CourseTest extends TestCase
         $response = $this->getJson('/courses', $this->defaultHeaders());
 
         $response->assertStatus(200)
-                ->assertJsonCount(10, 'data');
+                    ->assertJsonCount(10, 'data');
     }
 
     public function test_get_single_course_unauthenticated()
     {
-        $response = $this->getJson('/courses/fake_id',);
+        $response = $this->getJson('/courses/fake_id');
 
         $response->assertStatus(401);
     }

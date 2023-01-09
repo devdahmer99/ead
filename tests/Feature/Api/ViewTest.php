@@ -2,10 +2,10 @@
 
 namespace Tests\Feature\Api;
 
-use Tests\TestCase;
 use App\Models\Lesson;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
 class ViewTest extends TestCase
 {
@@ -22,7 +22,11 @@ class ViewTest extends TestCase
     {
         $payload = [];
 
-        $response = $this->postJson('/lessons/viewed', $payload, $this->defaultHeaders());
+        $response = $this->postJson(
+            '/lessons/viewed',
+            $payload,
+            $this->defaultHeaders()
+        );
 
         $response->assertStatus(422);
     }
@@ -33,7 +37,11 @@ class ViewTest extends TestCase
             'lesson' => 'fake_lesson'
         ];
 
-        $response = $this->postJson('/lessons/viewed', $payload, $this->defaultHeaders());
+        $response = $this->postJson(
+            '/lessons/viewed',
+            $payload,
+            $this->defaultHeaders()
+        );
 
         $response->assertStatus(422);
     }
@@ -41,6 +49,7 @@ class ViewTest extends TestCase
     public function test_make_viewed()
     {
         $lesson = Lesson::factory()->create();
+
         $payload = [
             'lesson' => $lesson->id,
         ];
